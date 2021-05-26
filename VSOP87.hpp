@@ -18,6 +18,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include <Arduino.h>
+
 #ifndef VSOP87_h
 #define VSOP87_h
 
