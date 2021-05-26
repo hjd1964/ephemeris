@@ -1103,21 +1103,12 @@ void Ephemeris::setLocationOnEarth(FLOAT latDegrees, FLOAT latMinutes, FLOAT lat
 #if !DISABLE_PLANETS
 EquatorialCoordinates  Ephemeris::equatorialCoordinatesForPlanetAtJD(SolarSystemObjectIndex solarSystemObjectIndex, JulianDay jd, FLOAT *distance)
 {
-    EquatorialCoordinates coordinates;
-    coordinates.ra  = 0;
-    coordinates.dec = 0;
-    
     FLOAT T      = T_WITH_JD(jd.day,jd.time);
     FLOAT lastT  = 0;
     FLOAT TLight = 0;
     HeliocentricCoordinates hcPlanet;
     HeliocentricCoordinates hcEarth;
     RectangularCoordinates  rectPlanet;
-    
-    JulianDay jd2;
-    jd2.day  = jd.day;
-    jd2.time = jd.time;
-    
     FLOAT x2=0,y2=0,z2=0;
     
     FLOAT dist = 0;
