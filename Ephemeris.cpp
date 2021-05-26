@@ -1109,6 +1109,10 @@ EquatorialCoordinates  Ephemeris::equatorialCoordinatesForPlanetAtJD(SolarSystem
     HeliocentricCoordinates hcPlanet;
     HeliocentricCoordinates hcEarth;
     RectangularCoordinates  rectPlanet;
+	rectPlanet.x = 0;
+	rectPlanet.y = 0;
+	rectPlanet.z = 0;
+
     FLOAT x2=0,y2=0,z2=0;
     
     FLOAT dist = 0;
